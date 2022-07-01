@@ -16,7 +16,7 @@ int main(void)
 
 		int L;
 
-		char str = "Last digit of";
+		char str[] = "Last digit of";
 
 		srand(time(0));
 
