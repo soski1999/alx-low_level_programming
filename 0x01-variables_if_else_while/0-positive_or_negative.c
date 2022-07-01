@@ -2,10 +2,13 @@
 #include <time.h>
 #include <stdio.h>
 
-/* main generates random number n
+/**
+ * main generates random number n
  *
  * Description: determines n is positive, zero, negative
-
+ *
+ * Return: Always 0
+ 
 */
 
 int main(void)
