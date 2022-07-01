@@ -2,11 +2,11 @@
 #include <time.h>
 #include <stdio.h>
 
-/* more headers goes there */
+/* main generates random number n
+ *
+ * Description: determines n is positive, zero, negative
 
-
-
-/* betty style doc for function main goes there */
+*/
 
 int main(void)
 
