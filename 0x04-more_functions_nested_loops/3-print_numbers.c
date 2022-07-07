@@ -3,7 +3,7 @@
 /**
  * print_numbers - print numbers between 0 and 9
  *
- * Return: void
+ * Return: the numbers 0 to 9
  */
 void print_numbers(void)
 {
