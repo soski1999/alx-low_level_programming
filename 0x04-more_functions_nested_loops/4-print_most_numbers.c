@@ -13,7 +13,7 @@ void print_most_numbers(void)
 	{
 		if (y == 2 || y == 4)
 		{
-			continue
+			continue;
 		}
 		else
 		{
