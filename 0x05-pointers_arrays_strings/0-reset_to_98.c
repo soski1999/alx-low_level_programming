@@ -2,7 +2,7 @@
 
 /**
  * reset_to_98 - takes pointer to an int with value of 98
- * @*n: pionter declaration
+ * @n: pionter to n
  *
  * Return: void
  */
