@@ -19,7 +19,7 @@ return (_sqrt(n, 1));
  *
  * Return: natural square root
  */
-int_sqrt(int n, int i)
+int _sqrt(int n, int i)
 {
 	int sqrt = i * i;
 
