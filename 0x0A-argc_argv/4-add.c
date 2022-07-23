@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <stdlib>
 
 /**
  * main - adds up two numbers
@@ -10,25 +11,41 @@
  */
 int main(int argc, char *argv[])
 {
+	int i, sum = 0;
+	char *h;
 	int i;
-	unsigned int sum = 0;
+	unsigned int k, sum = 0;
+	char *e;
 
-	if (argc == 1)
-	{
-		printf("0\n");
-	}
-	else if (argv[i] < 48 || argv[i] > 57)
-	{
-		printf("Error\n");
-		return (1);
-	}
-	else
+	if (argc > 1)
 	{
 		for (i = 1; i < argc; i++)
 		{
-			sum += atoi(argv[i]);
+			h = argv[i];
+			e = argv[i];
+			while (*h)
+				for (k = 0; k < strlen(e); k++)
+				{
+					if (*h >= 48 && *h <= 57)
+					{
+						sum += atoi(h);
+					}
+					else if (e[k] < 48 || e[k] > 57)
+					{
+						printf("Error\n");
+						return (1);
+					}
+					h++
+				}
+			h++;
+			sum += atoi(e);
+			e++;
 		}
-		printf("total = %d\n", sum);
+		printf("%d\n", sum);
+	}
+	else
+	{
+		printf("0\n");
 	}
 	return (0);
 }
