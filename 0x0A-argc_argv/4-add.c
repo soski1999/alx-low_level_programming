@@ -30,7 +30,8 @@ int main(int argc, char *argv[])
 					{
 						sum += atoi(h);
 					}
-					else if (e[k] < 48 || e[k] > 57)
+					else 
+						if (e[k] < 48 || e[k] > 57)
 					{
 						printf("Error\n");
 						return (1);
