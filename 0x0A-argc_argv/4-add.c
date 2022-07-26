@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * main - adds up two numbers
@@ -13,8 +14,7 @@ int main(int argc, char *argv[])
 {
 	int i, sum = 0;
 	char *h;
-	int i;
-	unsigned int k, sum = 0;
+	unsigned int k;
 	char *e;
 
 	if (argc > 1)
@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 						printf("Error\n");
 						return (1);
 					}
-					h++
+					h++;
 				}
 			h++;
 			sum += atoi(e);
