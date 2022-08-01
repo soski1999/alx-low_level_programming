@@ -1,8 +1,8 @@
-#include "dog.h"
 #include <stdlib.h>
+#include "dog.h"
 
 /**
- * init_dog - initializes avariable of type struct dog
+ * init_dog - initializes a dog structure
  * @d: a dog structure
  * @name: name of dog
  * @age: dogs age
