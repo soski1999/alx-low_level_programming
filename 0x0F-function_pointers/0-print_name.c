@@ -7,12 +7,9 @@
  *
  * Return: void
  */
-void print_name(char *name)
+void print_name(char *name, void (*f)(char *))
 {
-	_putchar("%s\n", name);
-}
-void (*f)(char *)
-{
+	if (f != NULL && name != NULL)
 	f = print_name;
-	f = (*);
+	f = (name);
 }
