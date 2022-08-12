@@ -1,7 +1,7 @@
 #include "lists.h"
 #include <stdlib.h>
 
-/*
+/**
  * free_list - free list
  * @head: list
  *
@@ -18,5 +18,4 @@ void free_list(list_t *head)
 		free(n->str);
 		free(n);
 	}
-	return (head);
 }
