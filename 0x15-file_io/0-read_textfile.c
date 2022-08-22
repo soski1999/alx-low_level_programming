@@ -9,9 +9,12 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd;
-	int readed;
-	char *buf = malloc(sizeof(char *) * letters);
+	ssize_t fd;
+	ssize_t readed;
+	ssize_t pwrite;
+	char *buf;
+
+	buf = malloc(sizeof(char) * letters);
 
 	if (!buf)
 		return (0);
@@ -19,11 +22,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	if (filename == NULL)
 		return (0);
-	fd = open("myfile.txt", O_RDONLY, 0600);
+	fd = open(filename, O_RDONLY, 0600);
 	if (fd == -1)
 		return (0);
 	readed = read(fd, buf, letters);
-	write(STDOUT_FILENO, buf, readed);
+	pwrite = write(STDOUT_FILENO, buf, readed);
 	free(buf);
 	close(fd);
 	return (readed);
