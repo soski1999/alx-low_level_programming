@@ -16,18 +16,20 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	buf = malloc(sizeof(char) * letters);
 
-	if (!buf)
-		return (0);
-	if (!filename)
+	if (buf == NULL)
 		return (0);
 	if (filename == NULL)
 		return (0);
-	fd = open(filename, O_RDONLY, 0600);
+	fd = open(filename, O_RDONLY);
 	if (fd == -1)
 		return (0);
 	readed = read(fd, buf, letters);
+	if (readed == -1)
+		return (0);
 	pwrite = write(STDOUT_FILENO, buf, readed);
+	if (pwrite == -1)
+		return (0);
 	free(buf);
 	close(fd);
-	return (readed);
+	return (pwrite);
 }
